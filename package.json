@@ -1,0 +1,11 @@
+{
+  "name": "koa-ioredis",
+  "version": "1.0.0",
+  "description": "Using ioredis for koa session middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "fundon <cfddream@gmail.com>",
+  "license": "MIT"
+}
