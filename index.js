@@ -18,6 +18,7 @@ var util = require('util');
  */
 
 module.exports = RedisStore;
+
 /**
  * Initialize redis session middleware with `opts`:
  *
@@ -28,8 +29,6 @@ module.exports = RedisStore;
  *   - {String} db        redis db
  *   - {String} password  redis password
  */
-
-
 
 function RedisStore(options) {
   if (!(this instanceof RedisStore)) {

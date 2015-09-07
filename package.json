@@ -7,5 +7,9 @@
     "test": ""
   },
   "author": "fundon <cfddream@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "ioredis": "^1.7.6"
+  }
 }
