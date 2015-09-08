@@ -48,7 +48,7 @@ function RedisStore(options) {
 
 util.inherits(RedisStore, EventEmitter);
 
-RedisStore.prototype.get = function *(sid) {
+RedisStore.prototype.get = function *get(sid) {
   var data = yield this.client.get(sid);
   debug('get session: %s', data || 'none');
   if (!data) {
@@ -62,7 +62,7 @@ RedisStore.prototype.get = function *(sid) {
   }
 };
 
-RedisStore.prototype.set = function *(sid, sess, ttl) {
+RedisStore.prototype.set = function *set(sid, sess, ttl) {
   if (typeof ttl === 'number') {
     ttl = Math.ceil(ttl / 1000);
   }
@@ -77,7 +77,7 @@ RedisStore.prototype.set = function *(sid, sess, ttl) {
   debug('SET %s complete', sid);
 };
 
-RedisStore.prototype.destroy = function *(sid, sess) {
+RedisStore.prototype.destroy = function *destroy(sid, sess) {
   debug('DEL %s', sid);
   yield this.client.del(sid);
   debug('DEL %s complete', sid);
